@@ -1,6 +1,20 @@
 # **[How To Automate Asset Management in Your iOS Apps](https://betterprogramming.pub/how-to-automate-asset-management-in-your-ios-apps-1f465bcaa4ef)** 
 
 Autocomplete resources like images, fonts and segues in Swift projects.
+## Demo  
+### Managing Images  
+<img width="470" alt="Assets_xcassets" src="https://user-images.githubusercontent.com/47273077/141607116-bb9db3d5-ddad-454c-855b-30119a76685b.png">  
+
+#### Currently you type:  
+```swift 
+ let myImage = UIImage(named: "MyImage")
+```
+#### With R.swift it becomes:
+
+```swift 
+ let rImage = R.image.myImage()
+```
+
 
 ## **[How to set up](https://github.com/mac-cain13/R.swift)**
 ### 1. Install it via CocoaPods by running pod install after adding this line to the Podfile:
