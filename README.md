@@ -19,3 +19,5 @@ pod ‘R.swift’
 ### 4. Add “$PODS_ROOT/R.swift/rswift” generate “$SRCROOT/R.generated.swift” as follows:  
 <img width="589" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606316-4830a2c6-e130-406c-8bbe-05ba08bedbf4.png">
 
+### 5. Add $TEMP_DIR/rswift-lastrun to Input Files and $SRCROOT/R.generated.swift to Output Files like this:  
+<img width="774" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606464-815fbf14-f962-476b-a981-2e1a66a98887.png">
