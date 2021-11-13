@@ -29,7 +29,17 @@ Autocomplete resources like images, fonts and segues in Swift projects.
 ```
 
 ### Managing Localization  
+<img width="840" alt="Localizable_strings" src="https://user-images.githubusercontent.com/47273077/141608523-41e1bee5-adcf-4fc0-8b22-1dce586661d3.png">
 
+#### Currently you type:  
+```swift 
+  let myString = String(format: NSLocalizedString("Hello", comment: ""))
+```
+#### With R.swift it becomes:
+
+```swift 
+  let rString = R.string.localizable.hello()
+```
 
 
 ## **[How to set up](https://github.com/mac-cain13/R.swift)**
