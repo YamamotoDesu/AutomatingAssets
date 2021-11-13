@@ -12,12 +12,16 @@ pod ‘R.swift’
 <img width="567" alt="OtherViews_と_AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606087-ea7f1f67-5380-4bff-b870-c45e1d30fb40.png">
 
 ### 3. Move it above the “Compile Sources,” as shown below:  
-> The reason for is that the library will generate a R.generated.swift file, which will have all the properties that reference the assets used in our app. We want it generated before the app compiles all the files.
-
+> The reason for is that the library will generate a R.generated.swift file, which will have all the properties that reference the assets used in our app. We want it generated before the app compiles all the files.  
 <img width="560" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606136-99d18ab6-5928-4910-b851-87b88177f5af.png"> 
 
-### 4. Add “$PODS_ROOT/R.swift/rswift” generate “$SRCROOT/R.generated.swift” as follows:  
-<img width="589" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606316-4830a2c6-e130-406c-8bbe-05ba08bedbf4.png">
+### 4. Paste the following script:
+```
+if [ $ACTION != "indexbuild" ]; then
+  "$PODS_ROOT/R.swift/rswift" generate "$SRCROOT/R.generated.swift"
+fi
+```
+<img width="641" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606661-d05e5026-5f3b-4613-8006-9c77be44c26d.png">
 
 ### 5. Add $TEMP_DIR/rswift-lastrun to Input Files and $SRCROOT/R.generated.swift to Output Files like this:  
 <img width="774" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606464-815fbf14-f962-476b-a981-2e1a66a98887.png">
