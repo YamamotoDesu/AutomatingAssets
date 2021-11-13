@@ -2,7 +2,7 @@
 
 Autocomplete resources like images, fonts and segues in Swift projects.
 
-## How to set up
+## **[How to set up](https://github.com/mac-cain13/R.swift)**
 ### 1. Install it via CocoaPods by running pod install after adding this line to the Podfile:
 ```
 pod ‘R.swift’
