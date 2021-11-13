@@ -15,6 +15,19 @@ Autocomplete resources like images, fonts and segues in Swift projects.
  let rImage = R.image.myImage()
 ```
 
+### Managing Colors  
+<img width="629" alt="Notification_Center" src="https://user-images.githubusercontent.com/47273077/141607372-842da880-57d6-4f49-96c9-c93555ecba9a.png">
+
+#### Currently you type:  
+```swift 
+  let myColor = UIColor(named: "myColor")
+```
+#### With R.swift it becomes:
+
+```swift 
+ let rColor = R.color.myColor
+```
+
 
 ## **[How to set up](https://github.com/mac-cain13/R.swift)**
 ### 1. Install it via CocoaPods by running pod install after adding this line to the Podfile:
