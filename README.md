@@ -30,4 +30,7 @@ fi
 ### 6. Build the app and open the project’s folder we will see the R.generated.swift file:  
 <img width="456" alt="AutomatingAssets" src="https://user-images.githubusercontent.com/47273077/141606729-3079a81c-c012-47d7-97b5-208d795b4d8a.png">
 
+### 7. Drag and drop the file into the Xcode project and leave “Copy items if needed” unchecked:  
+<img width="359" alt="R_generated_swift_と_Editing_AutomatingAssets_README_md_at_main_·_YamamotoDesu_AutomatingAssets" src="https://user-images.githubusercontent.com/47273077/141606795-29b8feda-9149-4651-836a-4b378be5aaf0.png">
+
 
