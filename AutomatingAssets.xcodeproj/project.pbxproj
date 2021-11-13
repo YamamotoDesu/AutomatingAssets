@@ -14,6 +14,8 @@
 		7B7F0CE4273F754B00840290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F0CE2273F754B00840290 /* Main.storyboard */; };
 		7B7F0CE6273F755400840290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F0CE5273F755400840290 /* Assets.xcassets */; };
 		7B7F0CE9273F755400840290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F0CE7273F755400840290 /* LaunchScreen.storyboard */; };
+		7B7F0CF2273F82DD00840290 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F0CF1273F82DD00840290 /* R.generated.swift */; };
+		7B7F0D14273F90F100840290 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F0D16273F90F100840290 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		7B7F0CE5273F755400840290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B7F0CE8273F755400840290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B7F0CEA273F755400840290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B7F0CF1273F82DD00840290 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		7B7F0CF9273F89B600840290 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		7B7F0CFA273F89B600840290 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7B7F0D15273F90F100840290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B7F0D17273F90F400840290 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9CBDEE7D52047565414CBA5B /* Pods-AutomatingAssets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomatingAssets.release.xcconfig"; path = "Target Support Files/Pods-AutomatingAssets/Pods-AutomatingAssets.release.xcconfig"; sourceTree = "<group>"; };
 		B4C26E6A4E22F820A13AAC17 /* Pods_AutomatingAssets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutomatingAssets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +78,7 @@
 		7B7F0CDB273F754B00840290 /* AutomatingAssets */ = {
 			isa = PBXGroup;
 			children = (
+				7B7F0CF1273F82DD00840290 /* R.generated.swift */,
 				7B7F0CDC273F754B00840290 /* AppDelegate.swift */,
 				7B7F0CDE273F754B00840290 /* SceneDelegate.swift */,
 				7B7F0CE0273F754B00840290 /* ViewController.swift */,
@@ -78,6 +86,7 @@
 				7B7F0CE5273F755400840290 /* Assets.xcassets */,
 				7B7F0CE7273F755400840290 /* LaunchScreen.storyboard */,
 				7B7F0CEA273F755400840290 /* Info.plist */,
+				7B7F0D16273F90F100840290 /* Localizable.strings */,
 			);
 			path = AutomatingAssets;
 			sourceTree = "<group>";
@@ -136,6 +145,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 7B7F0CD0273F754B00840290;
 			productRefGroup = 7B7F0CDA273F754B00840290 /* Products */;
@@ -153,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7F0CE9273F755400840290 /* LaunchScreen.storyboard in Resources */,
+				7B7F0D14273F90F100840290 /* Localizable.strings in Resources */,
 				7B7F0CE6273F755400840290 /* Assets.xcassets in Resources */,
 				7B7F0CE4273F754B00840290 /* Main.storyboard in Resources */,
 			);
@@ -191,14 +202,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
 		};
 		805CCD13CDC7C40BC7FCD531 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -227,6 +240,7 @@
 				7B7F0CE1273F754B00840290 /* ViewController.swift in Sources */,
 				7B7F0CDD273F754B00840290 /* AppDelegate.swift in Sources */,
 				7B7F0CDF273F754B00840290 /* SceneDelegate.swift in Sources */,
+				7B7F0CF2273F82DD00840290 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +251,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B7F0CE3273F754B00840290 /* Base */,
+				7B7F0CF9273F89B600840290 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -245,8 +260,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B7F0CE8273F755400840290 /* Base */,
+				7B7F0CFA273F89B600840290 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7B7F0D16273F90F100840290 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B7F0D15273F90F100840290 /* en */,
+				7B7F0D17273F90F400840290 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -256,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -317,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
