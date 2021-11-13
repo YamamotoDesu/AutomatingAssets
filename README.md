@@ -12,3 +12,5 @@ pod ‘R.swift’
 ### Add a new run script phase as follows:  
 <img width="567" alt="OtherViews_と_AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606087-ea7f1f67-5380-4bff-b870-c45e1d30fb40.png">
 
+### Move it above the “Compile Sources,” as shown below:  
+<img width="560" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606136-99d18ab6-5928-4910-b851-87b88177f5af.png">
