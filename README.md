@@ -25,3 +25,9 @@ fi
 
 ### 5. Add $TEMP_DIR/rswift-lastrun to Input Files and $SRCROOT/R.generated.swift to Output Files like this:  
 <img width="774" alt="AutomatingAssets_xcodeproj" src="https://user-images.githubusercontent.com/47273077/141606464-815fbf14-f962-476b-a981-2e1a66a98887.png">
+
+
+### 6. Build the app and open the project’s folder we will see the R.generated.swift file:  
+<img width="456" alt="AutomatingAssets" src="https://user-images.githubusercontent.com/47273077/141606729-3079a81c-c012-47d7-97b5-208d795b4d8a.png">
+
+
